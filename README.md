@@ -23,3 +23,7 @@
 
   ## Lien du répertoire Google drive
   https://drive.google.com/drive/folders/1EUhvAte4rHqNlMS6Expqlrkp6Z--KkRH
+
+## Lien du plan de cours 
+
+https://docs.google.com/document/d/1nkdb3GOZW4TdPb95oh7cslBe5r_AwQbOs-Gjk5wXNaE/edit?usp=sharing
