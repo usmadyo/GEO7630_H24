@@ -20,3 +20,6 @@
     - Contient les éléments nécessairent au bon déroulement et à la pratique des laboratoires
   ## Dossier TPs
     - Contient les énoncés des différents travaux pratiques
+
+  ## Lien du répertoire Google drive
+  https://drive.google.com/drive/folders/1EUhvAte4rHqNlMS6Expqlrkp6Z--KkRH

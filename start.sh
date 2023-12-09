@@ -1,2 +1,2 @@
-cd Install && sudo docker compose up -d
+cd Installation && sudo docker compose up -d
 cd ..
