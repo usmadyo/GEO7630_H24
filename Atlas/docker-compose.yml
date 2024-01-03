@@ -5,11 +5,9 @@ services:
     ports:
     - 8801:7800
     environment:
-    - DATABASE_URL=postgresql://admin_geo:maBALQe8YJOsKv3D36sl@geo7630h24.czxpipfmtgbl.us-east-2.rds.amazonaws.com/GEO7630H24
-    volumes:
-    - ./pg_tileserv.toml:/etc/pg_tileserv.toml
-    # depends_on:
-    # - "pg"
+    - DATABASE_URL=postgresql://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/${DB_NAME}
+    # volumes:
+    # - ./pg_tileserv.toml:/etc/pg_tileserv.toml
     restart: always
   pg_featureserv:
     image: "pramsey/pg_featureserv:latest"
@@ -17,9 +15,7 @@ services:
     - 9000:9000
     environment:
     # CHANGE connection string from .env file
-    - DATABASE_URL=postgresql://admin_geo:maBALQe8YJOsKv3D36sl@geo7630h24.czxpipfmtgbl.us-east-2.rds.amazonaws.com/GEO7630H24
-    # depends_on:
-    # - "pg"
+    - DATABASE_URL=postgresql://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/${DB_NAME}
     restart: always
   # geoserver:
   #     image: geosolutionsit/geoserver
