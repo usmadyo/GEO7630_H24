@@ -2,8 +2,6 @@ Laboratoire 1
 
 Optimiser la densité d’implantation d’arbres dans les parcs de Montréal (problématique factice)
 
-  
-
 
 [**Pré requis**** ****2**](https://docs.google.com/document/d/1HlB3fWprIa065k5GXIVYk9o06-TrNycb_xS-U8FEG-4/edit#heading=h.hgyuo2ihqxc)
 
