@@ -1,2 +1,2 @@
-cd Installation && sudo docker compose up -d
+cd Atlas && sudo docker compose up -d
 cd ..
