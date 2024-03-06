@@ -35,7 +35,9 @@ Votre WRITER devra écrire les hexagones dans la base de données suivante :
 
 NAME : GEO7630H24
 
-HOST :  **geo7630h24.czxpipfmtgbl.us-east-2.rds.amazonaws.com**
+~~_ANCIEN HOST :_  **_geo7630h24.czxpipfmtgbl.us-east-2.rds.amazonaws.com_**~~
+
+**NOUVELLE HOST : geo7630h24.cvwywmuc8u6v.us-east-1.rds.amazonaws.com**
 
 PORT : 5432
 
@@ -45,11 +47,11 @@ USERNAME: votre code ms
 
 PASSWORD: password
 
-NOM DU SCHEMA : geo7630
+NOM DU SCHEMA : VOTRECODEMS
 
 NOM DE VOTRE TABLE: VOTRECODEMS\_EXAM1
 
-![](https://lh7-us.googleusercontent.com/gq78uLHlhiD4WFaO41vymqWw_5OTF6mCSz3MiNeHLAJSVT1ETzfVpbToG8lm4nYCDgbdaKeQi2G4ZaoBiUU_UpGTCV8mNfdUeLOTH6vesj4vSiUbDKRpzKb5NWLc_RRPCIZvMtvvUBg0DuDTS4kOO1E)
+![](https://lh7-us.googleusercontent.com/NwGZb89MkgW6_3HULTzTOkSu2n-0wm3CCu2LRGYUDzu1WeZTSwOAyQZnH-lH7xWl4fSPfvZ32NNA6d1ziOzavx0eb6d3S3t9L5h6AXOJbkLHjn9vRW7i0zEIVdpGkrZvogtDa7L2ijygb53jgkl-raM)
 
 Exemple de processus donné à titre indicatif de la marche à suivre. 
 
@@ -57,5 +59,7 @@ Bien certainement il y a des pièges qu’il faudra déjouer.
 
 Indice : EPSG:4326 vs EPSG:3857
 
+**TABLE QUALIFIER : VOTRECODEMS**![](https://lh7-us.googleusercontent.com/g55L4C4npTkHOmZCVRVh2sGJZLW_8Ye2rTT-dYOEoRbfndxANoPcJOUGt-lAdWlzDLLvaAzN9QuPcrpCH2sgrIGwBNbwqPpTBcmrti1IN4z9Z75H3vSV-rH2SdxM_hzUY48gsWN_5v6XNFH7OYAQ32Y)
+
 \
-![](https://lh7-us.googleusercontent.com/NtZXxetLfejB6znWSyFzZgCe_pOxeXI9Ife5uA1ZH-J1IGz35ctegv0OJzr_sSZsaAmP5jEqjxl_ZTPJcTx6LKqlQQVFW7u1_ZOyj4sflnAaibtPmNeMTOghdK-1Ai9ADnSMzQBUmw5jujxlUfcLnWI)
+![](https://lh7-us.googleusercontent.com/lLkTMdKQbHqTNfJKPRm2MPCUnDvDxPUosJaiUzEFKeMmgXSb2Q1K1Cd_DGyHfO5RKfmwwUYbdYJajar1Grg9LOl5cX0FGFGmE0L5VpG1Yw9iIRq63PymWzi193TZUv4ODyowePvUhk9JL8tITSOaXmc)
