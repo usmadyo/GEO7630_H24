@@ -17,17 +17,17 @@ services:
     # CHANGE connection string from .env file
     - DATABASE_URL=postgresql://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/${DB_NAME}
     restart: always
-  # geoserver:
-  #     image: geosolutionsit/geoserver
-  #     ports:
-  #     - 8080:8080
-  #     environment:
-  #     - INSTALL_EXTENSIONS=true
-  #     - STABLE_EXTENSIONS="PGRaster"
-  #     volumes:
-  #     - ./web.xml:/usr/local/tomcat/webapps/geoserver/WEB-INF/web.xml
-  #     - ./Laboratoires/Lab7/geoserverData:/var/geoserver/datadir
-  #     restart: always
+  geoserver:
+      image: geosolutionsit/geoserver
+      ports:
+      - 8080:8080
+      environment:
+      - INSTALL_EXTENSIONS=true
+      - STABLE_EXTENSIONS="PGRaster"
+      volumes:
+      - ./web.xml:/usr/local/tomcat/webapps/geoserver/WEB-INF/web.xml
+      - ./Laboratoires/Lab7/geoserverData:/var/geoserver/datadir
+      restart: always
   server-web:
     image: nginx
     ports:
