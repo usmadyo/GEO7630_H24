@@ -25,7 +25,7 @@
       -->
     <param-value>PARTIAL-BUFFER2</param-value>
   </context-param>
-  
+
   <context-param>
     <!-- see comments on the PARTIAL-BUFFER strategy -->
     <!-- this sets the size of the buffer.  default is "50" = 50kb -->
@@ -33,7 +33,14 @@
     <param-name>PARTIAL_BUFFER_STRATEGY_SIZE</param-name>
     <param-value>50</param-value>
   </context-param>
-  
+
+<!-- START : ADDED BY CLEMENT GLOGOWSKI to access the good endpoint for Codespace -->
+<context-param>
+    <param-name>PROXY_BASE_URL</param-name>
+    <param-value>https://solid-robot-66qj67v4535v7g-8080.app.github.dev/geoserver</param-value>
+</context-param>
+<!-- END : ADDED BY CLEMENT GLOGOWSKI to access the good endpoint for Codespace -->
+
   <!--Can be true or false (defaults to: false). -->
   <!--When true the JSONP (text/javascript) output format is enabled -->
   <!--

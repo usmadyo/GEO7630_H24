@@ -18,15 +18,16 @@ services:
     - DATABASE_URL=postgresql://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/${DB_NAME}
     restart: always
   geoserver:
-      image: geosolutionsit/geoserver
+      image: kartoza/geoserver:2.24.2
       ports:
       - 8080:8080
       environment:
       - INSTALL_EXTENSIONS=true
-      - STABLE_EXTENSIONS="PGRaster"
+      - GEOSERVER_ADMIN_PASSWORD=password
+      # - SAMPLE_DATA=true
       volumes:
       - ./geoserver/web.xml:/usr/local/tomcat/webapps/geoserver/WEB-INF/web.xml
-      - ./geoserver/data:/var/geoserver/datadir
+      - ../Laboratoires/Lab-10:/var/geoserver/datadir
       restart: always
   server-web:
     image: nginx
