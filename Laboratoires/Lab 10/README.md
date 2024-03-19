@@ -2,11 +2,9 @@ Laboratoire 10 - GEO7630H24
 
 Configuration Geoserver et mise en place de service WMS, WFS
 
-[Configuration et lancement d’une instance de Geoserver 2](https://docs.google.com/document/d/1R3A75g_y_A_T7BLmh6MJyKAeMTDd4KYmTzTV0oqv_4U/edit#heading=h.d1nzl2zi4y2v)
+[**Étape 1 Configuration et lancement d’une instance de Geoserver ****2**](https://docs.google.com/document/d/1R3A75g_y_A_T7BLmh6MJyKAeMTDd4KYmTzTV0oqv_4U/edit#heading=h.d1nzl2zi4y2v)
 
-[Étape 1 2](https://docs.google.com/document/d/1R3A75g_y_A_T7BLmh6MJyKAeMTDd4KYmTzTV0oqv_4U/edit#heading=h.fhuzvg6r031d)
-
-[Étape 2 3](https://docs.google.com/document/d/1R3A75g_y_A_T7BLmh6MJyKAeMTDd4KYmTzTV0oqv_4U/edit#heading=h.2ljf5rr9ygjh)
+[**Étape 2 ****3**](https://docs.google.com/document/d/1R3A75g_y_A_T7BLmh6MJyKAeMTDd4KYmTzTV0oqv_4U/edit#heading=h.2ljf5rr9ygjh)
 
 [**Étape 3 Les contrôles de carte ****7**](https://docs.google.com/document/d/1R3A75g_y_A_T7BLmh6MJyKAeMTDd4KYmTzTV0oqv_4U/edit#heading=h.il4btunf4o2a)
 
@@ -25,41 +23,59 @@ Ouvrez github (assurez vous d’être connecté)  : <https://github.com/Captain
 
 Lancer un codespace à partir de Main : 
 
-![](https://lh7-us.googleusercontent.com/Pj6R-zNyFV5Q3I4Z4T9dUvNxzPv176Af80b67-lxhjkkTNkRBmb-TRmsThSkzYemWqGMzrofrDsRl_eUGYPk59tCiFqrXHeV2ltJ1ecUO1VrKuoV6n9XZmeAICdEyJNOwvvTekyTu1RZTV1lGG17X3c)
+![](https://lh7-us.googleusercontent.com/fu519ubJYYGBTDg7RSBfSecdjLEM6hQmfvPRXx9PP-up3wXO0bO8pS4DfFOtiMD83PDzPI-geJhtqoc0KAwDSHpROijVPALZWpscVPcboZ-vmrQOoSDQg6jYvOBuIv48myIJc8RCSyF4jXRBnkTKGMY)
 
-Cela va installer démarrer une instance du projet github dans un environnement virtuel cloud dans lequel vous pourrez modifier et tester du code, mais aussi démarrer des services et applications informatiques et cartographiques.
+Cela va démarrer une instance du projet github dans un environnement virtuel cloud dans lequel vous pourrez modifier et tester du code, mais aussi démarrer des services et applications informatiques et cartographiques.
 
-![](https://lh7-us.googleusercontent.com/vHmexkkd4PilZPQdWlj0Cf5Oo3QS5amYHuDhSEksdL-k5LlW0OtAA4CGuPtQdhZ5x0IySr-9pdQceP7RkAValq6XJcWhfcuHtvosYKhlfuA1T6as2GMLZYcUCPv_5s3blwYq77Dp2vVvDKnL48YywD4)
+![](https://lh7-us.googleusercontent.com/R0ArEQ968JVov6E206tSAdqU2Ou6sXsG8YC-CNjojYY6b7noZYFUP-AqIppHFm4jFjcbNL4gMRGnfvyfrbJtE9BONBHYi-YMLVVtZRbS7J2xFy0MxLsp0tyfLoQEIuX7Z9o9NwkBEwikZvBO5iWRrDU)
 
 
 ## Étape 2
 
-Pour démarrer les applications de service cartographiques (Geoserver entre autres)
+1. Copier-coller le fichier .env.example 
+
+2. Renommer le .env
+
+3. Modifier la variable d’environnement pour y insérer votre codeMs et votre mot de passe
+
+4) DB\_USER=CODEMS
+
+5) DB\_PASSWORD=VOTREMOTDEPASSE
+
+6) DB\_HOST=geo7630h24.cvwywmuc8u6v.us-east-1.rds.amazonaws.com
+
+7) DB\_NAME=GEO7630H24
+
+Ensuite, pour démarrer les applications de service cartographiques
 
 Allez dans le dossier Atlas, puis cliquez droit sur le fichier docker-compose.yml 
 
 (prononcez YAMEUL ;-)
 
 \
-![](https://lh7-us.googleusercontent.com/CCRCH95nS66vn0WSuWquBJ2zyHpLNH7uhI7fs00TuiWdkOkl83w5Tk79RbDbRpvmcMSUGC4birfp1L0NxKzqBXsuqYBCMp0N6QP8QEG2A45sFdJLTGorBiQIyjmJbdWWUGuPKtQZispR-0veZcp-4ag)
+![](https://lh7-us.googleusercontent.com/wgminja-GxFLR_0lU-4B8fIqMYQFz9aE1QISpUl3LWYeznAiE1RRQf4JOa9hNCEkxhMsSAh0aJvvOESQUyyhVwJbjZbAcJzn6-b8Fm53B7XmAkiep0rtV1-zbHTU3kBuXzON9Djv_IRGQoWPqLBkn90)
+
+Si ‘‘Compose Up’’ n'apparaît pas, il faut installer préalablement l'extension Docker 
+
+![](https://lh7-us.googleusercontent.com/np1UVfgQUSwlEA_56fZgHSUswAw8zP8gpFz28Sj7B6gvD0Rn3WVeUzdHFpUcIDZw0qo9EPxe9R7prfGezUkVDXF_0AcWr3H6vTgE5JihGLvHFf97DGkFNuWWbeI1ZlFE2-T1PiLVOupa_tn0-Vu9sto)
 
 Cliquez sur la baleine à gauche pour voir que le container roule bien comme il faut.
 
 Soit des triangles verts et non des carrés rouges ( ;-) )
 
-![](https://lh7-us.googleusercontent.com/qdfCGFQTQ0I0UMUZaQ3wsuCUN5Hd7fPQwJqlmXLHqrOX6Aydl_kjf4_mhxois6GlDAGTTElk2wseUiGg0eZZgcKHk-9LH4w7IVB7PX-6i4fu7FjHrQwRnfpV3a7Lg7R5xkD7hQn2gPVYpYg-TNF6umI)
+![](https://lh7-us.googleusercontent.com/0RicUHl5hLqH_WY1FKmLPBC0RLb79R0HhPBaOqfGMVbftK6gMW_xa5Hj6F7ZoOXr6KP7mtIymeH1f1UV7iZXQDnx0kN-RmNLkwRvo1-4JcSEJCZk6fIrHhNoJWX2-zebgn6ZAzX6WNA51pJVddYp7qk)
 
 Vérifier que l’application roule correctement en allant voir la page d’accueil ex : 
 
 Ouvrez un terminal (CTRL+J) ou via l’interface comme ci-dessous.
 
-![](https://lh7-us.googleusercontent.com/CawEa5xWhnJuR3aSLCwC42WNEgh0kLZqSrOc-8xVerJv9lMRCsvRdSi72NIvhzRgpjVO_l3DFb4JnnuQKGtBTW7QqhG1gZN23auYNFPUSEMNMbXuXo1AvBxaCjdArDCpHYBuwQSl-MHmEUDvN-Qrh0Q)
+![](https://lh7-us.googleusercontent.com/c4VOGteBP9TJk2umNhjvCnjtR8NekX4KsKTunsIsW_LQ434bdD0oJD7Y4b3bttcECM06CkEcaK_JGcEquITG5l8AphlXO76K9nd64eS24kWQD_u3bBwWy5Y8x4MKsC6MFPVU26K2xtiZgYFhXHfzw3M)
 
-![](https://lh7-us.googleusercontent.com/yYlrA14k2jx5gpyLkz0ztVNIvN90G0yvby6qddwieyazhJjTEXu7lOtESwCbKpSK4tiFViaGvZrqXL9oHvje-NLHM8r5P0t3mtjUSz2KsosEbwTfxGoxKcy8YPskKvgYYOqBT5_pJSPLZbqjjaLmFtk)
+![](https://lh7-us.googleusercontent.com/8aYnWhE3ifbw_7I_tMR1bxwqKZROgbJVWbiPssjKuYLY9O6KqlXIYkoDJHlixxEnPonfss4nBBnctOuaTTAfFNpd7h7z4ZSZ7cokm0Hi4k2HfRKGnVIfzljRak3U85Lhd8QMb9nw1icHsF2F8rDuNh0)
 
 Vous devriez voir apparaître l'Atlas Urbain Interactif dans votre navigateur
 
-![](https://lh7-us.googleusercontent.com/q8JI4TaeNhmOXEK5eRHLmKk2NVfvIsaEG5yVsLKgwwaBWVzqLkkUxJBO5mWGEWTHOv-YifDGabjXmQ-jUj3NrnQcnAyC92DfJ8smz1ujjfTktweLutok7X3JVbPc38JylvtXaZ6OQCGDl-yyqgiTSMk)
+![](https://lh7-us.googleusercontent.com/-MPnIcWGGSju6wI99crBNIbYp9dexhWTK36U4VL8cS-BGqKA6RD1Puwc_ciuiBdm_nbbywIpRMzsMmWqn1OnLDFHYpN6HjSAW_I-zBbg6K844HXF3VNo1O41LC0vQYTpnBIn8iwFxtNUIFo6yvifaAA)
 
 ********
 
@@ -70,7 +86,7 @@ Vous devriez voir apparaître l'Atlas Urbain Interactif dans votre navigateur
 
 **Ajoutez un contrôle de Navigation en haut à droite**
 
-Dans le fichier **/Atlas/app/app.js qui** est le fichier javascript qui contrôle toute notre application cartographique maplibre comme nous l’avons vu la semaine dernière
+Dans le fichier **/Atlas/app/app.js** qui est le fichier javascript qui contrôle toute notre application cartographique maplibre comme nous l’avons vu la semaine dernière
 
 Vous pouvez jouer avec l’ajout et la suppression des différents contrôleurs
 
@@ -124,7 +140,7 @@ map.addControl(scale); // ajout du contrôle en bas à gauche de la carte
 
 Une fois que vous avez enregistré votre fichier (ctrls+s) vous pouvez recharger la page web de l’application pour voir apparaître les contrôleurs comme ci dessous
 
-![](https://lh7-us.googleusercontent.com/A0xyqQ3SirPIW_PevWQuP9l8_Pg8Cg72M3hYB86gG1Cx8tAY3HpWa2BRyoGkK69eiB5qbn6LV5YwX8zdlye9XFcIjvMOpmAfv2uBo_hRizKoaAPOkIRRFEDHsASwaPHjwERFku0xBCkn_H7XHRbhpV4)
+![](https://lh7-us.googleusercontent.com/LlW3yvHhif_NjCqgXSAE5lHbWVUkXibV07JSB-6HRveDkblN_EzzOf2A46Zh9-XplbPa1KG70Pyqp5Zy-JW9WxQvMOSgcFZIY1nSXKq9EprRdUyVltyIByed_uiIHQiRbQkntO55eHXlyMKkjIReUDI)
 
 
 ##
@@ -135,29 +151,29 @@ Une fois que vous avez enregistré votre fichier (ctrls+s) vous pouvez recharger
 
 Toujours dans app.js
 
-Ajouter une méthode map.onLoad() qui permet d’écouter l’évènement de chargement de la carte et qui execute les fonctions que vous voulez lors du chargement
+Ajouter une méthode map.onLoad() qui permet d’écouter l’évènement de chargement de la carte et qui exécute les fonctions que vous voulez lors du chargement
 
 Ce que nous cherchons à faire ici est de charger automatiquement des données cartographique au chargement de l’application
 
 Néanmoins avant de procéder il faudra ouvrir publiquement le serveur de tuile pour que notre application puisse lire les tuiles depuis le serveur de tuiles (private pour le moment)
 
-![](https://lh7-us.googleusercontent.com/XhRDZT-Xm0bARJqakq_xisfHknv54073zIGo-FYIdWyQ0qm6FeR-y1JqTUjfa3YFy-BUHFiX7TXv_blDV0pZVdimTxaHrelZuX7vTAWgTzI6Yybg6RixjfwTbE_oITlFk7dDnoJUQMOR-Y1U82NiH1A)
+![](https://lh7-us.googleusercontent.com/7VJlHbR9_5PneJk8h9SLRWhiS5OuxuH8QDFb9l8DGrmn-PcLzPqWh1unYKLS83tHEL4_5MdyY-hPZWaKOAkgPbhdbDKmYcEt0vYoTQBZd5uCicGZxpEl9yx5y5ZfCxGRLtbPLP4HERwRamCl3aTKlP4)
 
-![](https://lh7-us.googleusercontent.com/ZyfN4h15fqzQlMNjVPn96PMcRaGhb4HFw1GeYDt9TAwebrV9Tr9ZQYuSfWjxAr8vID_MJoVxs20sbegJdKoFImIEBkWdG_6TRFLTs-8x1vDkfHRg0hVDSS6uPXv7BUsMORGyQ99bf529OASfFr_77OM)
+![](https://lh7-us.googleusercontent.com/R6Hr04XrYfpE1dOt1KZgF_v7UdVXe-s0AkUC8wb8QlQqe06KcKVHMy3KqsOeVGkWF_te7PSdcHYDzr38ohjMEWGSO-Frsqcfh8ohXc6B4ZKtgbmLFZSLAFWGRXUtlrHxH-YgxoDkGpKLNwOI7HwI9As)
 
 Vous avez désormais accès à tous les services (OUVERTS) dans la base de données postGIS du cours
 
-![](https://lh7-us.googleusercontent.com/EOXLbd1eVSfQFPF7gQ18RKTwIqsw9Ab6S67Zibuc1p73rV3WVaVYpr2nNDLRf9RWCL0WBt17e95GhMXopYZ5eLsxfZi4-EADgUR0O2m6lQQt3p--f_u3YS_gSfmjavuIAtj1NRn_JjJ6DIg-ZEqG_Yc)
+![](https://lh7-us.googleusercontent.com/6gSld-bMr63cw_xCrGE6WPgNTZrnGQ3cuPUGr0x6jznwDvoswudGft1HiuCa7uLUwJBwT-QaffpwO0ZAnG7WC7MnxdRgV_dVkAB2TEKm5GRgSe-I00ZgcglIiBVvIxiGRKrA8vIsuwrlYn4Clf9Pg5A)
 
 Ensuite vous allez devoir trouver l’url et les informations liées à votre service de tuiles vectorielles pour ce faire il faut aller dans l’interface du serveur de tuile
 
 Cliquez sur le lien JSON
 
-![](https://lh7-us.googleusercontent.com/m0QCMGO014dHaik_vMs8gmt289ZAOCFw6jb6a3TQfU4S_Le-0KU00fOF_wP1RVQgI2iEzUYezCFlCoxhCdZPeY3OQet_OlGaIsXJYKXPgy7bZFmTYyO5qCkCT2Yhdp_U-DMxsSwOLSV-fykCoZ2qRx8)
+![](https://lh7-us.googleusercontent.com/26qajaX0aPyvP2ru4yK5xET3k4fI707FzAyKLUns-iRN7viocyJZOiydSTGE5kjmjjok6HeY7Nlh3lE6S85tY2ect7n2iAMnW3l6ccf9DlY-UL5l0cNSyOLVzZUv9AYpd-BR1SCUYuKpIe5EKE5aDqY)
 
 Puis trouvez l’URL du service, et le id du service qui serviront dans Maplibre pour charger les données 
 
-![](https://lh7-us.googleusercontent.com/XKLa2wqd7NU6RdvJbdPv-okmyNppGkZrK27wIaTVAWNB3R2B2ZsCYIS9-8szvTeB4v2Lb3TseWhiiQsp2_LlTIwRvzduv7h5hJTCY1EIuCg1Kiufu_a4Gf0zk__Y5OEI6IWWfxajfEhwuIktBo2E-wE)
+![](https://lh7-us.googleusercontent.com/8t94qQHXq1afr-TQAEh6cL0qP8h1WMr0SOI6sXKgOjb_QLaYrJW4qNeeAZS7lA8YjzRMX4-sa4qEKgNW285oPYJkfcw_nYKUEdICjccEyUe8NBf9GBVY4_6UItE3Vr6TtyYCjDsWwME0aO_MLPoonYs)
 
 Voici un exemple fonctionnel pour charger les données dans le app.js
 
@@ -195,9 +211,9 @@ map.on('load', function () {
 
 });
 
-Si vous recharger la carte (apres avoir sauvegarder app.js) Vous devriez voir une carte avec des hexagones comme celle-ci
+Si vous recharger la carte (après avoir sauvegarder app.js) Vous devriez voir une carte avec des hexagones comme celle-ci
 
-![](https://lh7-us.googleusercontent.com/wvXemGgf7jtJjuwL3jvNgZD5BGPgK4yQabkFRFBag2xSoBgprxg-1nOLqHWdWmvdhejb7b7s3CpraOo3CZ-gits5kpR4KUpKMPKyqqvZHWvyYH9XoYoKoZy9R0SfqFiGP0tXZf7jXky_ASr-XB05AW0)
+![](https://lh7-us.googleusercontent.com/6YvBhiJvxg0JlFRnI5eP4BTbkRb0njPzHTkjf7Y4VdFFQhPuldtc5Ejov0f2unUiqV56vi7BnH2BUESguXncYvM2c9-QVg8wrQFfLEvT-7uqEB6EE7eAt4pPQZpEYSnLY6IrZhUEabV6q35PJM7FjX4)
 
 
 ## Etape 5 Stylisation
@@ -213,7 +229,7 @@ Ajouter à votre layer une propriété paint simple pour modifier le rendu carto
         }
 
 \
-![](https://lh7-us.googleusercontent.com/DTnF3oeLXqshRp2LCKhXtoCyXLlz88DGQlisHmvTYCuvSj8Nq30R00iyX1kF_PZf9PUzYjEkcj2OJoKBmyP61oT2QuDhuRcyrjveCRvE_ma4HwZpm-NLddZVswZkQ3lJ89CVKtj6BpCFcw__iAd2WwM)
+![](https://lh7-us.googleusercontent.com/40tUZoXaDN6L2Ad0teXDDxSd1YSXvnT9CbBmVmFpXJGobKWYbia3izm_mvFAEgQQqVhign-E9Jr1ieW3AQ2Plw7HCqpbcrGSNAYWseb3w-oJAQYBZMsCqrjXR_3wKOewoc7tH9ZkVefxYArXQxuLd9w)
 
 
 ##
@@ -242,7 +258,7 @@ Ajouter à votre layer une propriété paint simple pour modifier le rendu carto
 
         }
 
-![](https://lh7-us.googleusercontent.com/3UFpVrYnMcRy38kAKy_rALMjfE_ZswAaNzh747zNmlli7bCFei3nTEAdUcvayCHIcUgtxH9gPdaUPnmdpnoZ_o8pL6sXXeZr-TcfRG_spfmgWin-FxLnDnS7TVzI8K1uSemn0uxkKCzWiTuDJRBuMiE)
+![](https://lh7-us.googleusercontent.com/7AVWnEd9bxTxzfdHdau1T-j5H-l99idvh6Ra6C-wl1Q4Bw52n5R_k-M0SqZBTyNngd5usmMOb_3Ks-Kudkqm7vT39HnQIEQC9AmBxMcadT7eOIaFds18jGm16VaxeeLxV-a5UxbwE8mkE-mRJStl0tc)
 
 
 ## Étape 7 Ajouter une couche WFS
@@ -337,17 +353,17 @@ Ici nous allons procéder autrement, nous allons créer un bouton dans le HTML p
 
 Idéalement après l’équipe 7 autour de la ligne 170++
 
-![](https://lh7-us.googleusercontent.com/e__WmWICJ0_Ks61fOXIsdGcuww8i4EA9lpXf-jOn0e-EPFXTljvffUU8vaOXr3GewvSEG2SbyWW0nYZNiBsXfOzC_4P9ExwtjUU_NeJ-f1atGrBNqrPuPuaDoXO4GTk4g1exnNpQIC9H2zywrcmMZzQ)
+![](https://lh7-us.googleusercontent.com/eZcbgIYPkMbS96XUn1BswPsIjp2tY6BVfyWmz8kyH88B6nm1DL6ZNR0xhLavJt1EBLNnjTOcMYd3qWdZ_MWwlXPdm-OBU1syqhvWXqaHnt3B-wU8NztiWyKUmKhcqbZoiVNlT8h_A_QzGa42imNQfMM)
 
 Code ici : 
 
     \<button type="button" class="btn btn-primary" onclick="loadWFS()">Load WFS Data\</button>
 
-![](https://lh7-us.googleusercontent.com/vQXmf8vguWQLIos76_g-c3nsOyt-mtRArf-gwVDFe628-cpHfXFvynPdMrEWgV3jNAJ9AjQo9lkJ44dvZc_caN6VNVEH1ha1KZ0fAe2RSnL3hYNCrv44jcb60YpyPQbdMhF1KHanauEgnqj80zRYyQQ)
+![](https://lh7-us.googleusercontent.com/J8t6kRu16GnHP_cuHl1ETLK7SFrIvz1USvBSD06EgFuFZKF9aZ4xwC5SOJHvYiFBMkshWLqaRHzwpTGDaYAFG7WNnrk8SdHr89MVEHe7W_lZxupcYc7sUoo_PTsFftToKW_ty5rce8hB7AsPK0DyQBw)
 
 Maintenant cliquez sur le bouton est la magie opère (si vous êtes un bon magicien ;-) héhé )
 
-![](https://lh7-us.googleusercontent.com/rqzNsyzKACdandg0_-Oa6zWopj2srSu1uYtaCjcc6UvqdRVIRZ4UEhViKaix5E8SJx6MfPSidHVsGpvKWov5sRbkujp9FuWihlhXeVmwkLmr69Wef6mBcFextsF6FbQagzJZTSHPminD3k0iR2xYAJ4)
+![](https://lh7-us.googleusercontent.com/mpXZ0i4tG23q0TFcI064jURBJ3dvd1rggt9sPKWVlb6YW7OBkuoDy3EZZ7E0KUoqO6ketgcq9GpOwuSG6Qv-076yATEtXc9UXGE65Yh0ROngoGhwVsoidA_aFxOonEjNfzy_iCypo9UjOR9XOjV5RCI)
 
 Bravo semaine prochaine on monte le niveau encore un peu
 
