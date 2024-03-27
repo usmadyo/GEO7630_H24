@@ -5,57 +5,31 @@
     
     #map {
         position:absolute;
-        right:0;
-        top:0;
+        right:23%;
+        /* top:0; */
+        bottom:20%;
         height: 100vh;  
-        width: 80%;
+        width: 65%;
     }
+
+    #bottomMenu {
+        position:absolute;
+        right:23%;
+        /* top:0; */
+        bottom:0%;
+        height: 20%;  
+        width: 65%;
+        background-color: red;
+    }
+
     
-    #menu {
-        position: absolute;
-        top:4.5%;
-        right: 0;
-        width: 25%;
-    }
-    
-    #titre {
-        padding: 20px;
-    }
-    #menu2 {
-        position: absolute;
-        top:4.5%;
-        left: 0;
-        width: 25%;
-    }
-    
-    #menu3 {
-        position: relative;
-        top: 60%;
-        bottom: 0;
-        right: 0;
-        width: 50%;
-    }
-    
-    #boite {
-        margin: 10px;
-        padding: 20px;
-        background: ligthgrey;
-    }
-    
-    #boite2 {
-        margin: 10px;
-        padding: 20px;
-        background: ligthgrey;
-    }
-    
-    #bouton1 {
-        padding: 20px
-    }
-    
-    #bouton2 {
-        padding: 20px
-    }
-    
-    #bouton3 {
-        padding: 20px
+    #rightMenu {
+        position:absolute;
+        right:0%;
+        /* top:0; */
+        bottom:0%;
+        height: 100vh;  
+        width: 23%;
+        background-color: blueviolet;
+
     }
