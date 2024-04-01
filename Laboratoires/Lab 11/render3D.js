@@ -3,14 +3,12 @@
  */
 function generate3D() {
     // Affiche un message de test dans la console
-    console.log('test');
 
     // Supprime toutes les couches et sources existantes de la carte
     removeAllLayersAndSources();
 
-    // Crée une grille en utilisant la fonction makeGrid()
+    // Crée une grille en utilisant la fonction makeGrid() du module createGrid.js
     var grid = makeGrid();
-    console.log(grid);
 
     // Ajoute une nouvelle source de données geojson à la carte avec la grille générée
     map.addSource('3d-source', {

@@ -1,5 +1,5 @@
-function generateClusters() {
-    
+function generateClusters () {
+
     removeAllLayersAndSources()
 
     map.addSource('clusters-source', {
