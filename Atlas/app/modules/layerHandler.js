@@ -45,8 +45,8 @@ function loadRandomPointsLayer() {
     })
 }
 
-// Ajouter un événement de clic sur le bouton "resetMap"
-// pour supprimer toutes les couches et sources de la carte
+// // Ajouter un événement de clic sur le bouton "resetMap"
+// // pour supprimer toutes les couches et sources de la carte
 document
     .getElementById('resetMap')
     .addEventListener('click', removeAllLayersAndSources);
