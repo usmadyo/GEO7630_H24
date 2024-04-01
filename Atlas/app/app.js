@@ -32,3 +32,37 @@ function loadTeam(teamName) {
             console.error('There was a problem with fetching the team content:', error);
         });
 }
+
+
+
+const myLayers = ['grid', 'buffer', 'rdp', 'union', 'joined']
+
+// Cette fonction est appelée lorsque la carte est chargée.
+map.on('load', function () {
+    // Charge une couche de points aléatoires.
+    loadRandomPointsLayer()
+    // Ajoute un contrôle de légende personnalisé.
+    map.addControl(new MaplibreLegendControl({ 
+        rdp: "rdp", 
+        grid: 'grid',
+        union: 'union',
+        buffer: 'buffer',
+        joined: 'joined'
+    }, { onlyRendered: true }), "bottom-left");
+});
+
+// Cette fonction est appelée lorsque la carte est en attente.
+map.on('idle', function () {
+    // Récupère les couches de style de la carte.
+    const layers = map.getStyle().layers;
+    // Parcourt toutes les couches.
+    layers.forEach((layer) => {
+        // Si la couche est 'joined', met à jour le compteur dynamique.
+        if (layer.id == 'joined') {
+            dynamicCount()
+        // Sinon, si la couche est 'rdp', met à jour le compteur de fonctionnalités.
+        } else if (layer.id == 'rdp') {
+            featureCount()
+        }        
+    });
+});
