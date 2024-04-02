@@ -20,24 +20,29 @@ function generateClusters () {
         source: 'clusters-source', // Source de données utilisée pour la couche
         filter: ['has', 'point_count'], // Filtrage pour afficher uniquement les clusters
         paint: {
-            'circle-color': [      // Couleur du cercle basée sur le nombre de points
-                'step',
-                ['get', 'point_count'],
-                '#51bbd6',
-                5,
-                '#f1f075',
-                10,
-                '#f28cb1'
+            'circle-color': [          // Couleur du cercle basée sur le nombre de points
+                'step',                // Utilise la fonction step pour définir des paliers
+                ['get', 'point_count'], // Récupère la propriété 'point_count' des données
+
+                // Définit les étapes de couleur pour le cercle
+                '#51bbd6',              // Si 'point_count' est inférieur à 5, utilise la couleur #51bbd6
+                5,                      // À 5 points, utilise la couleur #f1f075
+                '#f1f075',              // Si 'point_count' est inférieur à 10, utilise la couleur #f1f075
+                10,                     // À 10 points, utilise la couleur #f28cb1
+                '#f28cb1'               // Si 'point_count' est supérieur ou égal à 10, utilise la couleur #f28cb1
             ],
-            'circle-radius': [     // Rayon du cercle basé sur le nombre de points
-                'step',
-                ['get', 'point_count'],
-                20,
-                20,
-                40,
-                40,
-                60
+
+            'circle-radius': [         // Rayon du cercle basé sur le nombre de points
+                'step',                // Utilise la fonction step pour définir des paliers
+                ['get', 'point_count'], // Récupère la propriété 'point_count' des données
+                // Définit les étapes de rayon pour le cercle
+                20,                     // Si 'point_count' est inférieur à 20, utilise un rayon de 20
+                20,                     // À 20 points, utilise un rayon de 20
+                40,                     // Si 'point_count' est inférieur à 40, utilise un rayon de 40
+                40,                     // À 40 points, utilise un rayon de 40
+                60                      // Si 'point_count' est supérieur ou égal à 40, utilise un rayon de 60
             ]
+
         }                
     });
     
@@ -71,5 +76,5 @@ function generateClusters () {
 
 // Écouteur d'événement pour le bouton de génération des clusters
 document
-  .getElementById('generateClusters')
-  .addEventListener('click', generateClusters);
+  .getElementById('generateClusters') // id unique du bouton
+  .addEventListener('click', generateClusters); // ajoute un event de type click qui lance la fonction generateClusters()

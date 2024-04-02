@@ -1,7 +1,7 @@
 // Cette fonction supprime toutes les couches et sources de la carte
 function removeAllLayersAndSources() {
     var allSources = map.getStyle().sources;
-
+    console.log(allSources)
     // Supprimer chaque couche
     myLayers.forEach(function (layerName) {
         if (map.getLayer(layerName)) {
