@@ -42,13 +42,14 @@ map.on('load', function () {
     // Charge une couche de points aléatoires.
     loadRandomPointsLayer()
     // Ajoute un contrôle de légende personnalisé.
-    map.addControl(new MaplibreLegendControl({ 
-        rdp: "rdp", 
-        grid: 'grid',
-        union: 'union',
-        buffer: 'buffer',
-        joined: 'joined'
-    }, { onlyRendered: true }), "bottom-left");
+    // Lab 12
+    // map.addControl(new MaplibreLegendControl({ 
+    //     rdp: "rdp", 
+    //     grid: 'grid',
+    //     union: 'union',
+    //     buffer: 'buffer',
+    //     joined: 'joined'
+    // }, { onlyRendered: true }), "bottom-left");
 });
 
 // Cette fonction est appelée lorsque la carte est en attente.
