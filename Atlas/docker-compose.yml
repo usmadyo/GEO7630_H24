@@ -24,5 +24,5 @@ services:
     volumes:
       - ./app/:/usr/share/nginx/html
       - ../Laboratoires/Lab 11/:/usr/share/nginx/html/modules/lab11
-
+    restart: always
   

@@ -27,6 +27,22 @@ function loadTeam(teamName) {
         })
         .then(data => {
             document.getElementById(teamName).innerHTML = data;
+            // Charger les fichiers .js depuis le répertoire spécifique
+            const scripts = document.getElementById(teamName).querySelectorAll('script[src]');
+            scripts.forEach(script => {
+                const newScript = document.createElement('script');
+                newScript.src = `./${teamName}/${script.getAttribute('src')}`;
+                document.body.appendChild(newScript);
+            });
+           // Charger les fichiers .css depuis le répertoire spécifique
+            const links = document.getElementById(teamName).querySelectorAll('link[rel="stylesheet"]');
+            links.forEach(link => {
+                const newLink = document.createElement('link');
+                newLink.rel = 'stylesheet';
+                newLink.type = 'text/css';  // Ajoutez ce type pour éviter l'erreur de type MIME
+                newLink.href = `./${teamName}/${link.getAttribute('href')}`;
+                document.head.appendChild(newLink);
+            });
         })
         .catch(error => {
             console.error('There was a problem with fetching the team content:', error);
@@ -66,4 +82,5 @@ map.on('idle', function () {
             featureCount()
         }        
     });
+    // alert('test')
 });
