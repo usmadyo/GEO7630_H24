@@ -106,6 +106,7 @@ Documentation : [Create and style clusters](https://maplibre.org/maplibre-gl-js/
 7. Le **\<button>** id du bouton se nomme : **\`'generateClusters'\`**
 
 8. N’oubliez pas d’ajouter la source du module javascript dans le fichier html **index.html**
+   9. Emplacement du module à mettre dans le fichier html : ./modules/lab11/renderClusters.js
 
 ![](https://lh7-us.googleusercontent.com/XOeK_u2rykBVa4gQSGvliXKpbRWz695z-T81T2FgvRd9qV_Rkc7wajqH_yx5h3qHEvhbMsLqY0rIylA00AjZ8T4UnUh1CwechKCDL1w5YMgkAJQczrGkNkw9PXAkiy01MdF__LukvHv9uQFhGQyB-_g)
 
