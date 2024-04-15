@@ -22,4 +22,4 @@ function load_station() {
 // Écouteur d'événement pour le bouton de génération des clusters 
 document
     .getElementById('load_station'); // id unique du bouton
-    .addEventListener('click', load_station); // ajoute un event de type click qui lance la fonction load_station()
+//.addEventListener('click', load_station); // ajoute un event de type click qui lance la fonction load_station()
