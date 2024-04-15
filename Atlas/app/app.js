@@ -54,9 +54,9 @@ function loadTeam(teamName) {
 const myLayers = ['grid', 'buffer', 'rdp', 'union', 'joined']
 
 // Cette fonction est appelée lorsque la carte est chargée.
-map.on('load', function () {
+//map.on('load', function () {
     // Charge une couche de points aléatoires.
-    loadRandomPointsLayer()
+    //loadRandomPointsLayer()
     // Ajoute un contrôle de légende personnalisé.
     // Lab 12
     // map.addControl(new MaplibreLegendControl({ 
@@ -66,7 +66,7 @@ map.on('load', function () {
     //     buffer: 'buffer',
     //     joined: 'joined'
     // }, { onlyRendered: true }), "bottom-left");
-});
+//});
 
 // Cette fonction est appelée lorsque la carte est en attente.
 map.on('idle', function () {
