@@ -7,7 +7,6 @@ var map = new maplibregl.Map({
     hash: true // activation du hash pour la gestion de l'historique de la carte
 });
 
-
 function loadTeam(teamName) {
     // Vider toutes les divs
     document.getElementById('Equipe1').innerHTML = '';
@@ -34,7 +33,7 @@ function loadTeam(teamName) {
                 newScript.src = `./${teamName}/${script.getAttribute('src')}`;
                 document.body.appendChild(newScript);
             });
-           // Charger les fichiers .css depuis le répertoire spécifique
+            // Charger les fichiers .css depuis le répertoire spécifique
             const links = document.getElementById(teamName).querySelectorAll('link[rel="stylesheet"]');
             links.forEach(link => {
                 const newLink = document.createElement('link');
@@ -49,38 +48,71 @@ function loadTeam(teamName) {
         });
 }
 
+//const myLayers = ['stationsRSQA', 'h4', 'h5', 'h6', 'h7', 'h8'];
 
 
-const myLayers = ['grid', 'buffer', 'rdp', 'union', 'joined']
+map.on('click', 'stationsRSQA', function (e) {
+    var coordinates = turf.centroid(e.features[0]).geometry.coordinates; // Calcul des coordonnées du centre de la géométrie cliquée
 
-// Cette fonction est appelée lorsque la carte est chargée.
-//map.on('load', function () {
-    // Charge une couche de points aléatoires.
-    //loadRandomPointsLayer()
-    // Ajoute un contrôle de légende personnalisé.
-    // Lab 12
-    // map.addControl(new MaplibreLegendControl({ 
-    //     rdp: "rdp", 
-    //     grid: 'grid',
-    //     union: 'union',
-    //     buffer: 'buffer',
-    //     joined: 'joined'
-    // }, { onlyRendered: true }), "bottom-left");
-//});
+    // Création du contenu du popup
+    var popupContent = '<h3>' + e.features[0].properties.stationid + '</h3>'; // Vous pouvez personnaliser le contenu du popup en fonction de vos besoins
 
-// Cette fonction est appelée lorsque la carte est en attente.
-map.on('idle', function () {
-    // Récupère les couches de style de la carte.
-    const layers = map.getStyle().layers;
-    // Parcourt toutes les couches.
-    layers.forEach((layer) => {
-        // Si la couche est 'joined', met à jour le compteur dynamique.
-        if (layer.id == 'joined') {
-            dynamicCount()
-        // Sinon, si la couche est 'rdp', met à jour le compteur de fonctionnalités.
-        } else if (layer.id == 'rdp') {
-            featureCount()
-        }        
-    });
-    // alert('test')
+    // Ajout du popup à la carte Maplibre
+    new maplibregl.Popup()
+        .setLngLat(coordinates)
+        .setHTML(popupContent)
+        .addTo(map);
 });
+
+map.on('click', 'h4', function (e) {
+    var coordinates = turf.centroid(e.features[0]).geometry.coordinates; // Calcul des coordonnées du centre de la géométrie cliquée
+
+    // Création du contenu du popup
+    var popupContent = '<h3>' + e.features[0].properties.nom + '</h3>'; // Vous pouvez personnaliser le contenu du popup en fonction de vos besoins
+
+    // Ajout du popup à la carte Maplibre
+    new maplibregl.Popup()
+        .setLngLat(coordinates)
+        .setHTML(popupContent)
+        .addTo(map);
+});
+
+map.on('click', 'h2', function (e) {
+    var coordinates = turf.centroid(e.features[0]).geometry.coordinates; // Calcul des coordonnées du centre de la géométrie cliquée
+
+    // Création du contenu du popup
+    var popupContent = '<h3>' + e.features[0].properties.secteur + '</h3>'; // Vous pouvez personnaliser le contenu du popup en fonction de vos besoins
+
+    // Ajout du popup à la carte Maplibre
+    new maplibregl.Popup()
+        .setLngLat(coordinates)
+        .setHTML(popupContent)
+        .addTo(map);
+});
+
+map.on('idle', function () {
+    const layers = map.getStyle().layers;
+    layers.forEach((layer) => {
+        if (layer.id == 'stationsRSQA') {
+            featureCount() // Appelez la fonction de votre module qui compte le nombre de points à l'ecran
+        }
+    });
+});
+
+/**
+* Fonction qui génère une couleur aléatoire en format hexadécimal.
+* @returns {string} Couleur générée au format hexadécimal.
+*/
+function getRandomColor() {
+    // Définition des caractères hexadécimaux possibles
+    var letters = '0123456789ABCDEF';
+    // Initialisation de la couleur avec le préfixe hexadécimal (#)
+    var color = '#';
+    // Boucle pour générer chaque caractère de la couleur (6 caractères)
+    for (var i = 0; i < 6; i++) {
+        // Sélection aléatoire d'un caractère hexadécimal
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    // Retourne la couleur générée au format hexadécimal
+    return color;
+}
