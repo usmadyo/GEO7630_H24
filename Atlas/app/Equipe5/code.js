@@ -37,9 +37,38 @@ function calculateDistance(){
 }
 
 // Appel de la fonction createBuffer (turj.js) pour créer des buffer avec les stations RSQA
-function createBuffer(){
-    featureCollection = ['stationsRSQA'];
-    console.log(radiusInput)
+function createBuffertest() {
+ 
+    // Récupérer les entités de votre source de données spécifique (stations RSQA)
+    var features = map.querySourceFeatures('h3_source', {
+        sourceLayer: 'KA791969.IQA_Station'
+    });
+ 
+    // Convertir les entités en GeoJSON FeatureCollection
+    var geojsonFeatures = {
+        type: 'FeatureCollection',
+        features: features
+    };
+ 
+    // Appel de la fonction createBuffer avec les entités et une distance de 2500 mètres
+    const myBufferLayer = createBuffer(geojsonFeatures, 2500);
+ 
+    // Ajouter une source de données pour le buffer
+    map.addSource('buffer-source', {
+        type: 'geojson',
+        data: myBufferLayer
+    });
+ 
+    // Ajouter la couche représentant le buffer sur la carte Mapbox
+    map.addLayer({
+        'id': 'buffer',
+        'type': 'fill',
+        'source': 'buffer-source',
+        'paint': {
+            // Définit la couleur de remplissage du buffer
+            'fill-color': 'rgba(12,122,122,0.5)'
+        }
+    });
 }
 
 // Appeler la fonction pour créer une couche 2.5D
