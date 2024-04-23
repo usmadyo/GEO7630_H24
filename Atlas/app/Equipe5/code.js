@@ -23,7 +23,7 @@ var scale = new maplibregl.ScaleControl({
 map.addControl(scale); // ajout du contrôle en bas à gauche de la carte
 
 // list des couches à supprimr avec le bouton Reset map
-const myLayers = ['stationsRSQA','h2','h4', 'h5', 'h6','h7', 'h8'];
+const myLayers = ['stationsRSQA','h2','h4', 'h5', 'h6','h7', 'h8', 'buffer'];
 
 // Compteur de nombre des enregistrements RSQA
 function featureCount() {
@@ -54,7 +54,7 @@ function createBuffertest() {
     const myBufferLayer = createBuffer(geojsonFeatures, 2500);
  
     // Ajouter une source de données pour le buffer
-    map.addSource('buffer-source', {
+    map.addSource('h3-source', {
         type: 'geojson',
         data: myBufferLayer
     });
@@ -63,13 +63,18 @@ function createBuffertest() {
     map.addLayer({
         'id': 'buffer',
         'type': 'fill',
-        'source': 'buffer-source',
+        'source': 'h3-source',
         'paint': {
             // Définit la couleur de remplissage du buffer
             'fill-color': 'rgba(12,122,122,0.5)'
         }
     });
 }
+// Écouteur d'événement pour le bouton de génération des buffer
+document
+    .getElementById('createBuffertest')// id unique du bouton
+    .addEventListener('click', createBuffertest); // ajoute un event de type click qui lance la fonction createbuffertest()
+
 
 // Appeler la fonction pour créer une couche 2.5D
 function generate3D(){
